@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* Resetando estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #ffebee; /* Fundo rosa claro */
+    color: #333;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #e91e63; /* Rosa escuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header h2#azul_clarinha {
+    color: #03a9f4; /* Azul claro */
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: #e91e63; /* Rosa escuro */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #d81b60; /* Rosa profundo */
+}
+
+/* Seções principais */
+main {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Disposição lado a lado para artigos */
+section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+article {
+    background-color: #ffe4e1; /* Rosa bem claro */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    flex: 1;
+}
+
+.vermelho_maari {
+    color: #ff6347; /* Tomate */
+    margin-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}

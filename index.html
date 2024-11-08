@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1>maria</h1>
+ <em>so sei que nada sei</em>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit
+    . Nam, sint minima. Culpa rem <del>pipocr</del> <ins>pipoca</ins>iste illum deleniti exercitationem,
+     eos quod ab fuga dolorem placeat nostrum nisi, praesentium nesciunt id at in.</p>
+<p>biscoito<strong> maizena</strong></p>
+<blockquote> 
+     filme “Barbie” estreou mundialmente no último dia 20 de julho e em menos de 
+    uma semana já é a maior bilheteria do ano nos Estados Unidos e no Canadá, 
+    arrecadando US$ 155 milhões no primeiro final de semana de exibição.</blockquote>
+   <pre><code>import java.util.Scanner;
+
+    public class JogoDaVelha {
+        private static char[][] tabuleiro = new char[3][3];
+        private static char jogadorAtual = 'X';
+    
+        public static void main(String[] args) {
+            inicializarTabuleiro();
+            while (true) {
+                imprimirTabuleiro();
+                jogada();
+                if (verificarVencedor()) {
+                    imprimirTabuleiro();
+                    System.out.println("Jogador " + jogadorAtual + " venceu!");
+                    break;
+                }
+                if (tabuleiroCheio()) {
+                    imprimirTabuleiro();
+                    System.out.println("Empate!");
+                    break;
+                }
+                trocarJogador();
+            }
+        }
+    
+        private static void inicializarTabuleiro() {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    tabuleiro[i][j] = ' ';
+                }
+            }
+        }
+    
+        private static void imprimirTabuleiro() {
+            System.out.println("-------------");
+            for (int i = 0; i < 3; i++) {
+                System.out.print("| ");
+                for (int j = 0; j < 3; j++) {
+                    System.out.print(tabuleiro[i][j] + " | ");
+                }
+                System.out.println();
+                System.out.println("-------------");
+            }
+        }
+    
+        private static void jogada() {
+            Scanner scanner = new Scanner(System.in);
+            int linha, coluna;
+            while (true) {
+                System.out.println("Jogador " + jogadorAtual + ", insira a linha e a coluna (0-2): ");
+                linha = scanner.nextInt();
+                coluna = scanner.nextInt();
+                if (linha >= 0 && linha < 3 && coluna >= 0 && coluna < 3 && tabuleiro[linha][coluna] == ' ') {
+                    tabuleiro[linha][coluna] = jogadorAtual;
+                    break;
+                } else {
+                    System.out.println("Movimento inválido! Tente novamente.");
+                }
+            }
+        }
+    
+        private static void trocarJogador() {
+            jogadorAtual = (jogadorAtual == 'X') ? 'O' : 'X';
+        }
+    
+        private static boolean verificarVencedor() {
+            // Verifica linhas, colunas e diagonais
+            for (int i = 0; i < 3; i++) {
+                if ((tabuleiro[i][0] == jogadorAtual && tabuleiro[i][1] == jogadorAtual && tabuleiro[i][2] == jogadorAtual) ||
+                    (tabuleiro[0][i] == jogadorAtual && tabuleiro[1][i] == jogadorAtual && tabuleiro[2][i] == jogadorAtual)) {
+                    return true;
+                }
+            }
+            return (tabuleiro[0][0] == jogadorAtual && tabuleiro[1][1] == jogadorAtual && tabuleiro[2][2] == jogadorAtual) ||
+                   (tabuleiro[0][2] == jogadorAtual && tabuleiro[1][1] == jogadorAtual && tabuleiro[2][0] == jogadorAtual);
+        }
+    
+        private static boolean tabuleiroCheio() {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (tabuleiro[i][j] == ' ') {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+    }</code></pre>
+        <ul>
+            <li>chocolate</li>
+            <li>garrafa
+                <li>vermelho</li>
+                <ol>
+                    <li>fone</li>
+                    <li>cabelo</li>
+                    <li>progressiva</li>
+                </ol>
+            </li>
+        </ul>    
+        <dt>
+            <dd>n se </dd>
+            <dd>garrafa</dd>
+            <dd>motos</dd>
+        </dt>     
+        
+      <p><a href="https://www.google.com.br/">clique aqui</a></p>
+      <h1>primeira pagina </h1>  
+      <p>clique <a href="pagina 2.html" target="_self"rel=next>aqui</a>pagina </p>
+
+        
+
+
+
+ 
+</body
+</html>
